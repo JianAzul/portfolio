@@ -1,4 +1,4 @@
-// App.js - Main component
+// App.js - Main component with video data
 import React, { useState } from 'react';
 import './App.css'; // We'll create this file for your styles
 import Profile from './components/Profile';
@@ -24,7 +24,7 @@ function App() {
     bannerImage: '/assets/images/banner.jpg'
   };
   
-  // Project data
+  // Project data with videos
   const projects = [
     {
       id: 'project1',
@@ -43,7 +43,43 @@ function App() {
       links: [
         { text: 'Gameplay Demo', url: 'https://www.youtube.com/watch?v=eFfwpp1MaYk' },
         { text: 'View Code', url: '#' }
+      ],
+      // Main video for project card
+      videoSrc: '/assets/videos/videodemos/reconnect-preview.mp4',
+      videoTitle: 'Re:connect Game Preview',
+      // Additional videos for the modal
+      videoDemos: [
+        {
+          src: '/assets/videos/videodemos/reconnect-gameplay.mp4',
+          title: 'Full Gameplay Demo',
+          description: 'Watch a complete playthrough showing all game mechanics and difficulty progression.'
+        },
+        {
+          src: '/assets/videos/videodemos/reconnect-terminal.mp4',
+          title: 'Terminal Interface Demo',
+          description: 'A closer look at the pseudo-terminal interface and boot sequence.'
+        }
       ]
+    },
+    {
+      id: 'project2',
+      title: 'Portfolio Website',
+      date: 'April',
+      description: 'A responsive portfolio website built with React and modern design principles to showcase my projects and skills.',
+      fullDescription: 'This portfolio website was designed with a focus on clean, responsive UI and intuitive navigation. It features a modular component structure, responsive design for all device sizes, and optimized media loading.',
+      features: [
+        'Responsive layout that works on mobile, tablet, and desktop',
+        'Tab-based navigation for different content sections',
+        'Modal popups for detailed project information',
+        'Video and image embedding capabilities',
+        'Performance optimizations including lazy loading'
+      ],
+      summary: 'This project helped me refine my React skills, responsive design techniques, and front-end architecture. I focused on creating a maintainable codebase with reusable components that could easily be expanded as my portfolio grows.',
+      links: [
+        { text: 'GitHub Repository', url: 'https://github.com/JianAzul/portfolio' }
+      ],
+      videoSrc: '/assets/videos/videodemos/portfolio-overview.mp4',
+      videoTitle: 'Portfolio Site Walkthrough'
     }
   ];
   
@@ -61,11 +97,19 @@ function App() {
     { category: 'Other', items: 'Responsive Design, SEO, Performance Optimization' }
   ];
   
-  // Media data
+  // Media data with videos
   const media = [
     {
       title: 'Portfolio Walkthrough',
       description: 'A video tutorial explaining my design process and portfolio projects',
+      videoSrc: '/assets/videos/videodemos/portfolio-tutorial.mp4',
+      icon: 'fas fa-play-circle'
+    },
+    {
+      title: 'Design Process Overview',
+      description: 'A look at how I approach new design projects',
+      videoSrc: '/assets/videos/videodemos/design-process.mp4',
+      icon: 'fas fa-paint-brush'
     }
   ];
   

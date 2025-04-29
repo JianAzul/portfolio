@@ -1,5 +1,6 @@
-// ProjectModal.js - Component for project details modal
+// ProjectModal.js - Component for project details modal with video support
 import React from 'react';
+import ProjectVideo from './ProjectVideo';
 
 function ProjectModal({ project, onClose }) {
   const { 
@@ -7,7 +8,10 @@ function ProjectModal({ project, onClose }) {
     fullDescription, 
     features, 
     summary, 
-    links 
+    links,
+    videoSrc,
+    videoTitle,
+    videoDemos
   } = project;
 
   return (
@@ -22,6 +26,13 @@ function ProjectModal({ project, onClose }) {
         </div>
         
         <div className="modal-body">
+          {videoSrc && (
+            <section className="modal-section">
+              <h3>Project Demo</h3>
+              <ProjectVideo videoSrc={videoSrc} title={videoTitle || title} />
+            </section>
+          )}
+          
           <section className="modal-section">
             <h3>Project Description</h3>
             <p>{fullDescription}</p>
@@ -35,6 +46,22 @@ function ProjectModal({ project, onClose }) {
               ))}
             </ul>
           </section>
+          
+          {videoDemos && videoDemos.length > 0 && (
+            <section className="modal-section">
+              <h3>Video Demonstrations</h3>
+              <div className="video-demos-container">
+                {videoDemos.map((demo, index) => (
+                  <div key={index} className="video-demo-item">
+                    <ProjectVideo videoSrc={demo.src} title={demo.title} />
+                    {demo.description && (
+                      <p className="video-demo-description">{demo.description}</p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
           
           <section className="modal-section">
             <h3>Summary</h3>
