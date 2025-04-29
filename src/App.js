@@ -15,11 +15,11 @@ function App() {
   
   // Profile data
   const profileData = {
-    name: 'Your Name',
-    username: 'your_username',
+    name: 'Jian Azul',
+    username: 'Jijoazul',
     bio: 'Designer-Coder-Engineer | Creating beautiful experiences | Available for freelance work',
-    location: 'Your Location',
-    joinDate: 'March 2023',
+    location: 'Washington',
+    joinDate: 'May',
     verified: true,
     bannerImage: '/assets/images/banner.jpg'
   };
@@ -28,58 +28,20 @@ function App() {
   const projects = [
     {
       id: 'project1',
-      title: 'E-commerce Website',
-      date: 'Oct 10',
-      description: 'Just launched my new e-commerce website! Check out the clean design and smooth user experience. #WebDev #UI/UX',
-      fullDescription: 'A fully responsive e-commerce website built with React and Node.js.',
+      title: 'Re:connect – A Retro-Inspired Typing Game',
+      date: 'October',
+      description: 'Re:connect is a retro-style typing game built with JavaScript over a 10-week sprint. Designed to evoke the feel of old DOS systems and Pip-Boy interfaces, it combines tight mechanics with nostalgic visuals.',
+      fullDescription: 'Re:connect is a retro-inspired typing game developed by a small team under tight deadlines. Built with JavaScript, the project simulates a broken computer environment through a pseudo-terminal interface, glitch visuals, and reactive sound design. Despite limited resources, we created an immersive, replayable experience with progressive difficulty and polished feedback loops.',
       features: [
-        'User authentication and profiles',
-        'Product catalog with filtering and search',
-        'Shopping cart and checkout process',
-        'Admin dashboard for inventory management',
-        'Payment integration with Stripe'
+        'Pseudo-terminal launcher that simulates a broken computer boot-up',
+        'Custom-coded particle effects triggered by correct typing',
+        'Dynamic glitch visuals for mistyped words',
+        'Progressive word complexity and typing speed increases',
+        'Immersive sound design featuring clicks, glitches, and confirmation tones'
       ],
-      summary: 'This project demonstrates my skills in frontend and backend development, database design, and third-party API integration.',
+      summary: 'This project deepened my skills in JavaScript graphics programming, small-team collaboration, gameplay design, and project documentation. It emphasized balancing aesthetics, technical complexity, and user experience under real-world constraints.',
       links: [
-        { text: 'Visit Website', url: '#' },
-        { text: 'View Code', url: '#' }
-      ]
-    },
-    {
-      id: 'project2',
-      title: 'Mobile App Design',
-      date: 'Sep 28',
-      description: 'Excited to share my latest mobile app design! Created with React Native and focusing on accessibility. #MobileApp #ReactNative',
-      fullDescription: 'A React Native mobile application focused on accessibility and user experience.',
-      features: [
-        'Cross-platform compatibility (iOS and Android)',
-        'Custom UI components and animations',
-        'Offline-first architecture',
-        'Push notifications',
-        'Deep accessibility integration'
-      ],
-      summary: 'This project showcases my mobile development skills, attention to accessibility standards, and ability to create smooth, intuitive user interfaces.',
-      links: [
-        { text: 'App Store', url: '#' },
-        { text: 'View Code', url: '#' }
-      ]
-    },
-    {
-      id: 'project3',
-      title: 'Data Visualization Dashboard',
-      date: 'Aug 15',
-      description: 'Just completed this dashboard project using Vue.js and D3 for data visualization. Real-time updates and responsive design. #DataViz #VueJS',
-      fullDescription: 'An interactive dashboard built with Vue.js and D3.js for real-time data visualization.',
-      features: [
-        'Real-time data updates via WebSockets',
-        'Multiple visualization types (charts, graphs, maps)',
-        'Customizable dashboard layouts',
-        'Data filtering and export options',
-        'Responsive design for all device sizes'
-      ],
-      summary: 'This project demonstrates my skills in data visualization, frontend frameworks, and creating interactive user experiences.',
-      links: [
-        { text: 'Live Demo', url: '#' },
+        { text: 'Gameplay Demo', url: 'https://www.youtube.com/watch?v=eFfwpp1MaYk' },
         { text: 'View Code', url: '#' }
       ]
     }
@@ -87,10 +49,8 @@ function App() {
   
   // Links data
   const links = [
-    { icon: 'fab fa-github', text: 'GitHub', url: '#' },
-    { icon: 'fab fa-linkedin', text: 'LinkedIn', url: '#' },
-    { icon: 'fas fa-globe', text: 'Personal Website', url: '#' },
-    { icon: 'fas fa-envelope', text: 'your.email@example.com', url: 'mailto:your.email@example.com' }
+    { icon: 'fab fa-github', text: 'GitHub', url: 'https://github.com/JianAzul/portfolio' },
+    { icon: 'fab fa-linkedin', text: 'LinkedIn', url: 'https://www.linkedin.com/in/jian-azul/' },
   ];
   
   // Skills data
@@ -106,32 +66,6 @@ function App() {
     {
       title: 'Portfolio Walkthrough',
       description: 'A video tutorial explaining my design process and portfolio projects',
-      icon: 'fas fa-video',
-      link: 'https://youtube.com/'
-    },
-    {
-      title: 'Design Podcast Interview',
-      description: 'My interview on the Design Systems podcast discussing UX patterns',
-      icon: 'fas fa-podcast',
-      link: 'https://spotify.com/'
-    },
-    {
-      title: 'Conference Talk: Modern React Patterns',
-      description: 'My presentation from React Summit 2023 on modern component patterns',
-      icon: 'fas fa-microphone-alt',
-      link: 'https://youtube.com/'
-    },
-    {
-      title: 'Design Showcase',
-      description: 'A gallery of my recent UI/UX design work featured on Dribbble',
-      icon: 'fas fa-images',
-      link: 'https://dribbble.com/'
-    },
-    {
-      title: 'Technical Blog: State Management',
-      description: 'My article on modern state management in React applications',
-      icon: 'fas fa-newspaper',
-      link: 'https://medium.com/'
     }
   ];
   
